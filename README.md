@@ -5,12 +5,12 @@ This Weather App provides real-time weather information for various cities aroun
 
 ### Features
 - Real-time weather data fetching from the OpenWeatherMap API with Geolocation.
-- Dynamic background that changes based on the current weather conditions.
+- Dynamic background that changes based on the current weather conditions and time of day.
 - Display of weather-related details such as temperature, wind direction, humidity, and a general overview.
-- Supports multiple major cities across the globe.
+- Supports multiple major cities across the globe and Geolocation.
 
 ## How to Use
-1. Select a city from the dropdown menu.
+1. Select a city from the dropdown menu or select "current location"
 2. Click the 'Submit' button to fetch and display the weather data for the selected city.
 
 ## Prerequisites
