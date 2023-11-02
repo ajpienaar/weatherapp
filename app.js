@@ -33,25 +33,56 @@ document.addEventListener("DOMContentLoaded", function() {
       const iconCode = weatherData.weather[0].icon;
       const overview = weatherData.weather[0].main;
   
+      //calculate time of day for background image
+      const currentTimeUTC = weatherData.dt;
+      const sunriseTimeUTC = weatherData.sys.sunrise;
+      const sunsetTimeUTC = weatherData.sys.sunset;
+      let isDaytime = currentTimeUTC >= sunriseTimeUTC && currentTimeUTC < sunsetTimeUTC;
+
+
       let backgroundElement = document.getElementById('background');
       backgroundElement.className = '';
-  
-  //changes the background image depending on the weather overview
-      if (overview === 'Clouds') {
-          backgroundElement.classList.add("clouds");
-        } else if (overview === 'Clear') {
-          backgroundElement.classList.add("clear");
-        } else if (overview === 'Rain') {
-          backgroundElement.classList.add("rain");
-        } else if (overview === 'Snow') {
-          backgroundElement.classList.add("snow");
-        } else if (overview === 'Thunderstorm') {
-          backgroundElement.classList.add("thunder");
-        } else if (overview === 'Drizzle') {
-          backgroundElement.classList.add("drizzly");
-        } else if (overview === 'Mist' || overview === 'Smoke' || overview === 'Haze' || overview === 'Dust' || overview === 'Fog' || overview === 'Sand' || overview === 'Ash') {
-          backgroundElement.classList.add("foggy");
-        }
+
+  //changes the background image depending on the weather overview day/night
+    if (overview === 'Clouds') {
+      if (isDaytime) {
+        backgroundElement.classList.add("clouds-day");
+      } else {
+        backgroundElement.classList.add("clouds-night");
+      }
+    } else if (overview === 'Clear') {
+      if (isDaytime) {
+        backgroundElement.classList.add("clear-day");
+      } else {
+        backgroundElement.classList.add("clear-night");
+      }
+    } else if (overview === 'Rain') {
+      if (isDaytime) {
+        backgroundElement.classList.add("rain-day");
+      } else {
+        backgroundElement.classList.add("rain-night");
+      }
+    } else if (overview === 'Snow') {
+      if (isDaytime) {
+        backgroundElement.classList.add("snow-day");
+      } else {
+        backgroundElement.classList.add("snow-night");
+      }
+    } else if (overview === 'Thunderstorm') {
+      backgroundElement.classList.add("thunder");
+    } else if (overview === 'Drizzle') {
+      if (isDaytime) {
+        backgroundElement.classList.add("drizzly-day");
+      } else {
+        backgroundElement.classList.add("drizzly-night");
+      }
+    } else if (overview === 'Mist' || overview === 'Smoke' || overview === 'Haze' || overview === 'Dust' || overview === 'Fog' || overview === 'Sand' || overview === 'Ash') {
+      if (isDaytime) {
+        backgroundElement.classList.add("foggy-day");
+      } else {
+        backgroundElement.classList.add("foggy-night");
+      }
+    }
   //updates the DOM with the weather data
       document.getElementById("name").innerText = city + " Weather";
       document.getElementById("wind").innerText = "Wind: " + wind + " km/h " + getWindDirection(direct);

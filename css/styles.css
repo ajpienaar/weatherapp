@@ -17,33 +17,65 @@ body { font-family: Arial, sans-serif; }
   margin-left: 10%;
 }
 
-.clouds{
-    background-image: url("../images/clouds.png");
+.clouds-day{
+    background-image: url("../images/clouds-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
 
 }
 
-.rain{
-    background-image: url("../images/rain.png");
+.clouds-night{
+  background-image: url("../images/clouds-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
+}
+
+.rain-day{
+    background-image: url("../images/rain-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
 }
 
-.clear{
-    background-image: url("../images/clear.png");
+.rain-night{
+  background-image: url("../images/rain-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
+}
+
+.clear-day{
+    background-image: url("../images/clear-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
 }
 
-.snow{
-    background-image: url("../images/snow.png");
+.clear-night{
+  background-image: url("../images/clear-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
+}
+
+.snow-day{
+    background-image: url("../images/snow-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
+}
+
+.snow-night{
+  background-image: url("../images/snow-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
 }
 
 .thunder{
@@ -53,18 +85,34 @@ body { font-family: Arial, sans-serif; }
     position: relative;
 }
 
-.drizzly{
-    background-image: url("../images/drizzly.png");
+.drizzly-day{
+    background-image: url("../images/drizzly-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
 }
 
-.foggy{
-    background-image: url("../images/foggy.png");
+.drizzly-night{
+  background-image: url("../images/drizzly-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
+}
+
+.foggy-day{
+    background-image: url("../images/foggy-day.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
+}
+
+.foggy-night{
+  background-image: url("../images/foggy-night.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  position: relative;
+  color: white;
 }
 
 @media (max-width: 767px) { 
