@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Local Weather</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div class="background" id="background">
+  <div class="container">
+    <section class="selector">
+      <h1>Select a City</h1>
+      <p id="error"></p>
+      <form id="locationForm">
+        <div class="form-group">
+          <label for="city">City:</label>
+          <select id="city" name="city">
+            <option value="Wanaka">Wanaka</option>
+            <option value="Queenstown">Queenstown</option>
+            <option value="New York City">New York City, USA</option>
+            <option value="London">London, United Kingdom</option>
+            <option value="Tokyo">Tokyo, Japan</option>
+            <option value="Sydney">Sydney, Australia</option>
+            <option value="Paris">Paris, France</option>
+            <option value="Cape Town">Cape Town, South Africa</option>
+            <option value="Rio de Janeiro">Rio de Janeiro, Brazil</option>
+            <option value="Moscow">Moscow, Russia</option>
+            <option value="Mumbai">Mumbai, India</option>
+            <option value="Beijing">Beijing, China</option>
+          </select>
+          <button type="submit">Submit</button>
+        </div>
+        <br>
+      </form>
+    </section>
+    <section class="weather-output">
+      <div class="location-icon">
+        <h1 id="name"></h1>
+        <img id="weatherIcon">
+      </div>
+      <div class="weather-details">
+        <h2 id="overview"></h2>
+        <p id="temp"></p> 
+        <p id="wind"></p>
+        <p id="direction"></p>  
+        <p id="humid"></p> 
+        <p id="general"></p>
+      </div>
+    </section>
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

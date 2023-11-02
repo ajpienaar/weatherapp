@@ -1,0 +1,66 @@
+body { font-family: Arial, sans-serif; }
+
+.container{
+  display: flex;
+  align-items: center;
+  height: 700px;
+}
+
+.weather-output{
+  width: 50%;
+}
+
+.selector{
+  width: 50%;
+  margin-left: 10%;
+}
+
+.clouds{
+    background-image: url("../images/clouds.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+
+}
+
+.rain{
+    background-image: url("../images/rain.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+
+.clear{
+    background-image: url("../images/clear.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+
+.snow{
+    background-image: url("../images/snow.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+
+.thunder{
+    background-image: url("../images/thunder.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+
+.drizzly{
+    background-image: url("../images/drizzly.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+
+.foggy{
+    background-image: url("../images/foggy.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
