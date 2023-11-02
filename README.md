@@ -17,3 +17,4 @@ This Weather App provides real-time weather information for various cities aroun
 Before running this app, make sure you have the following installed:
 - A modern web browser (e.g., Chrome, Firefox, Safari).
 - [Node.js](https://nodejs.org/) (if running locally).
+- A working OpenWeatherMap API
