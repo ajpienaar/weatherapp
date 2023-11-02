@@ -66,13 +66,30 @@ async function getWeather(lat, long) {
   }
 
 }
+function fetchCurrentLocationWeather() {
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+          position => {
+              getWeather(position.coords.latitude, position.coords.longitude);
+          }, 
+          error => {
+              console.error("Error Code = " + error.code + " - " + error.message);
+          }
+      );
+  } else {
+      console.log("Geolocation is not supported by this browser.");
+  }
+}
+
 document.getElementById("locationForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
   const selectedLocation = document.getElementById("city").value;
 
-  if (selectedLocation === "Wanaka") {
-    getWeather(-44.70, 169.15);
+  if (selectedLocation === "Current Location") {
+      fetchCurrentLocationWeather();
+  } else if (selectedLocation === "Wanaka") {
+      getWeather(-44.70, 169.15);
   } else if (selectedLocation === "Queenstown") {
     getWeather(-45.03, 168.66);
   } else if (selectedLocation === "New York City") {
