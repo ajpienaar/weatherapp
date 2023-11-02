@@ -3,11 +3,13 @@ body { font-family: Arial, sans-serif; }
 .container{
   display: flex;
   align-items: center;
-  height: 700px;
+  height: 980px;
 }
 
 .weather-output{
-  width: 50%;
+  width: 15%;
+  margin-right: 10%;
+  opacity: 0.8;
 }
 
 .selector{
@@ -63,4 +65,26 @@ body { font-family: Arial, sans-serif; }
     background-repeat: no-repeat; 
     background-size: cover; 
     position: relative;
+}
+
+@media (max-width: 767px) { 
+
+.container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+  }
+
+  .selector{
+    width:100%;
+    margin-right: 15%;
+    margin-top: 15%;
+  }
+
+  .weather-output{
+    margin-top: 30%;
+    width: 100%;
+    opacity: 0.8;
+    margin-left: 5%;
+  }
+  
 }
