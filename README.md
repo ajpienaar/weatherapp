@@ -1,10 +1,10 @@
 # Weather App
 
 ## Overview
-This Weather App provides real-time weather information for various cities around the world. Users can select a city from a dropdown menu and view the current weather conditions including temperature, humidity, wind speed, and a general description of the weather.
+This Weather App provides real-time weather information for various cities around the world. Users can select a city from a dropdown menu or select "current location" to view the current weather conditions including temperature, humidity, wind speed, and a general description of the weather.
 
 ### Features
-- Real-time weather data fetching from the OpenWeatherMap API.
+- Real-time weather data fetching from the OpenWeatherMap API with Geolocation.
 - Dynamic background that changes based on the current weather conditions.
 - Display of weather-related details such as temperature, wind direction, humidity, and a general overview.
 - Supports multiple major cities across the globe.
